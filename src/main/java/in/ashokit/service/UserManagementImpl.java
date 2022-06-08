@@ -126,7 +126,7 @@ public class UserManagementImpl implements UserManagement {
 
 		boolean isSent = emailUtils.sendEmail(to, subject, body);
 
-		if (isSent) {
+		if (savedEntity != null && isSent) {
 			return "Registration Successful";
 		}
 		return "Registration Failed";
